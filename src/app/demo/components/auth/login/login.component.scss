@@ -1,0 +1,29 @@
+.line-divider{
+    height: 1px;
+    width: 50%;
+    background-color: white;
+}
+
+.bgImg{
+    //background-position: center;
+    background-image: url(../../../../../assets/demo/images/access/british-busses.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.none-padding-x{
+   padding-left: 0 !important;
+   padding-right: 0 !important;
+}
+
+.px-10{
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+@media screen and (max-width: 1710px) {
+    .px-10{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
