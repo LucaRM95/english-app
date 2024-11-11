@@ -4,6 +4,11 @@
     background-color: white;
 }
 
+h1{
+    font-size: 50px;
+    font-weight: bold;
+}
+
 .bgImg{
     //background-position: center;
     background-image: url(../../../../../assets/demo/images/access/british-busses.jpg);
@@ -21,7 +26,7 @@
     padding-right: 10rem;
 }
 
-@media screen and (max-width: 1710px) {
+@media screen and (max-width: 750px) {
     .px-10{
         padding-left: 0;
         padding-right: 0;

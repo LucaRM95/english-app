@@ -19,6 +19,20 @@ import { AppLayoutComponent } from './layout/app.layout.component';
                                 ).then((m) => m.DashboardModule),
                         },
                         {
+                            path: 'calendar',
+                            loadChildren: () =>
+                                import(
+                                    './demo/components/calendar/calendar.module'
+                                ).then((m) => m.CalendarModule),
+                        },
+                        {
+                            path: 'chat',
+                            loadChildren: () =>
+                                import(
+                                    './demo/components/chat/chat.module'
+                                ).then((m) => m.ChatModule),
+                        },
+                        {
                             path: 'utilities',
                             loadChildren: () =>
                                 import(
@@ -33,18 +47,11 @@ import { AppLayoutComponent } from './layout/app.layout.component';
                                 ).then((m) => m.DocumentationModule),
                         },
                         {
-                            path: 'blocks',
-                            loadChildren: () =>
-                                import(
-                                    './demo/components/primeblocks/primeblocks.module'
-                                ).then((m) => m.PrimeBlocksModule),
-                        },
-                        {
                             path: 'pages',
                             loadChildren: () =>
-                                import(
-                                    './demo/pages/pages.module'
-                                ).then((m) => m.PagesModule),
+                                import('./demo/pages/pages.module').then(
+                                    (m) => m.PagesModule
+                                ),
                         },
                     ],
                 },

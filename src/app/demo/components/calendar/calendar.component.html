@@ -1,0 +1,15 @@
+<div class="grid dx-viewport">
+    <div class="col-12">
+        <dx-scheduler
+            timeZone="America/Los_Angeles"
+            [dataSource]="appointmentsData"
+            [views]="['week', 'month']"
+            currentView="month"
+            [currentDate]="currentDate"
+            [startDayHour]="9"
+            [height]="730"
+        >
+        </dx-scheduler>
+    </div>
+</div>
+
