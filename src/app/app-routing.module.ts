@@ -15,7 +15,7 @@ import { AppLayoutComponent } from './layout/app.layout.component';
                             path: '',
                             loadChildren: () =>
                                 import(
-                                    './demo/components/dashboard/dashboard.module'
+                                    './demo/components/home/home.module'
                                 ).then((m) => m.DashboardModule),
                         },
                         {
