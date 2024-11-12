@@ -1,0 +1,23 @@
+<div class="surface-ground flex min-h-screen min-w-screen overflow-hidden">
+    <div class="w-full">
+        <div class="flex flex-column align-items-center justify-content-center min-h-screen px-10">
+            <div class="flex flex-column align-items-center w-full mb-5 px-5">
+                <h1 class="mb-5">IRG English School</h1>
+                <p-button class="flex align-items-center justify-content-center text-sm font-medium mx-0"
+                    [outlined]="true">
+                    <i class="pi pi-google px-3"></i>
+                    Login with Google
+                </p-button>
+            </div>
+            <div class="flex align-items-center w-full px-5">
+                <div class="line-divider"></div>
+                <span class="px-2">O</span>
+                <div class="line-divider"></div>
+            </div>
+
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <div class="hidden xl:flex xl:flex-column xl:justify-content-center xl:align-items-center w-full bgImg"></div>
+</div>
+<p-toast position="bottom-right" />

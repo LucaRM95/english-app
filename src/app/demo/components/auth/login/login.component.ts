@@ -15,8 +15,7 @@ import { MessageService } from 'primeng/api';
                 color: var(--primary-color) !important;
             }
         `,
-    ],
-    styleUrls: ['./login.component.scss'],
+    ]
 })
 export class LoginComponent {
     public isLoading = false;

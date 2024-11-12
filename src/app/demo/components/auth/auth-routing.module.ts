@@ -1,13 +1,24 @@
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { LayoutComponent } from './layout/layout.component';
+import { ErrorComponent } from './error/error.component';
+import { AccessComponent } from './access/access.component';
+
+const routes: Routes = [{
+    path: '',
+    component: LayoutComponent,
+    children: [
+        { path: 'error', component: ErrorComponent },
+        { path: 'access', component: AccessComponent },
+        { path: 'login', component: LoginComponent },
+        { path: '**', redirectTo: '/notfound' },
+    ],
+}
+];
 
 @NgModule({
-    imports: [RouterModule.forChild([
-        { path: 'error', loadChildren: () => import('./error/error.module').then(m => m.ErrorModule) },
-        { path: 'access', loadChildren: () => import('./access/access.module').then(m => m.AccessModule) },
-        { path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule) },
-        { path: '**', redirectTo: '/notfound' }
-    ])],
-    exports: [RouterModule]
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule],
 })
-export class AuthRoutingModule { }
+export class AuthRoutingModule {}
